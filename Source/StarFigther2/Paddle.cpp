@@ -52,6 +52,6 @@ void APaddle::MoveHorizontal(float XAxisValue)
 }
 
 void APaddle::MoveVertical(float ZAxisValue) {
-	AddMovementInput(FVector(ZAxisValue, ZAxisValue, ZAxisValue), 1.0f, false);
+	AddMovementInput(FVector(0.0f, 0.0f, ZAxisValue), 1.0f, false);
 };
 
