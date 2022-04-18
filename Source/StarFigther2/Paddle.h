@@ -34,7 +34,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	virtual void Move(float AxisValue);
-	virtual void Move(float XAxisValue, float ZAxisMovement);
+	virtual void MoveHorizontal(float XAxisValue);
+	virtual void MoveVertical(float ZAxisValue);
 
 };

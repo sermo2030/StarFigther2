@@ -45,13 +45,13 @@ void APaddle::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-void APaddle::Move(float AxisValue)
+void APaddle::MoveHorizontal(float XAxisValue)
 {
-	AddMovementInput(FVector(AxisValue, 0.0f, 0.0f), 1.0f, false);
+	AddMovementInput(FVector(XAxisValue, 0.0f, 0.0f), 1.0f, false);
 
 }
 
-void APaddle::Move(float XAxisValue, float ZAxisMovement) {
-	AddMovementInput(FVector(XAxisValue, 0.0f, ZAxisMovement), 1.0f, false);
+void APaddle::MoveVertical(float ZAxisValue) {
+	AddMovementInput(FVector(ZAxisValue, ZAxisValue, ZAxisValue), 1.0f, false);
 };
 

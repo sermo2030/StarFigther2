@@ -21,6 +21,8 @@ class STARFIGTHER2_API APaddle_Player_Controller : public APlayerController
 protected:
 	virtual void BeginPlay() override;
 
-	void Move(float AxisValue);
+	void MoveHorizontal(float XAxisValue);
+
+	void MoveVertical(float ZAxisValue);
 	
 };

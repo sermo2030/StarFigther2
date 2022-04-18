@@ -25,15 +25,25 @@ void APaddle_Player_Controller::SetupInputComponent()
 
 	EnableInput(this);
 
-	InputComponent->BindAxis("Move", this, &APaddle_Player_Controller::Move);
+	InputComponent->BindAxis("MoveHorizontal", this, &APaddle_Player_Controller::MoveHorizontal);
+	InputComponent->BindAxis("MoveVertical", this, &APaddle_Player_Controller::MoveVertical);
 
 }
 
-void APaddle_Player_Controller::Move(float AxisValue)
+void APaddle_Player_Controller::MoveHorizontal(float XAxisValue)
 {
 	auto MyPawn = Cast<APaddle>(GetPawn());
 
 	if (MyPawn) {
-		MyPawn->Move(AxisValue);
+		MyPawn->MoveHorizontal(XAxisValue);
+	}
+}
+
+void APaddle_Player_Controller::MoveVertical(float ZAxisValue)
+{
+	auto MyPawn = Cast<APaddle>(GetPawn());
+
+	if (MyPawn) {
+		MyPawn->MoveVertical(ZAxisValue);
 	}
 }
